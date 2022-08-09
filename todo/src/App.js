@@ -43,8 +43,7 @@ function App() {
           <Todo key={i} index={i} todo={todo} remove={removeTodo} />
         ))}
         <br />
-        <label htmlFor="new-todo">Add a new To-Do:</label>
-        <br />
+        <div>Add a new To-Do:</div>
         <br />
         <Form addTodo={addTodo} />
         <button>Add #{todos.length + 1}</button>
