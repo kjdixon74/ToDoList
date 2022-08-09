@@ -1,3 +1,8 @@
+import React from "react";
+import Todo from "./Components/todo";
+import Form from "./Components/form";
+import "./App.css";
+
 function App() {
   // set initial state
   const [todos, setTodos] = React.useState([
@@ -32,14 +37,20 @@ function App() {
 
   return (
     <div className="app">
+      <h1>To-Do's</h1>
       <div className="todo-list">
         {todos.map((todo, i) => (
           <Todo key={i} index={i} todo={todo} remove={removeTodo} />
         ))}
-        <TodoForm addTodo={addTodo} />
+        <br />
+        <label htmlFor="new-todo">Add a new To-Do:</label>
+        <br />
+        <br />
+        <Form addTodo={addTodo} />
+        <button>Add #{todos.length + 1}</button>
       </div>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;

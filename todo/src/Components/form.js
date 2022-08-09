@@ -1,5 +1,7 @@
+import React from "react";
+
 // user input - includes validation
-function TodoForm({ addTodo }) {
+function Form({ addTodo }) {
   const [value, setValue] = React.useState("");
 
   const handleSubmit = (e) => {
@@ -22,9 +24,11 @@ function TodoForm({ addTodo }) {
         type="text"
         className="input"
         value={value}
-        placeholder="Add Todo..."
+        placeholder="Add To-Do..."
         onChange={(e) => setValue(e.target.value)}
       />
     </form>
   );
 }
+
+export default Form;

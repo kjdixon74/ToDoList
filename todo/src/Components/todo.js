@@ -8,3 +8,5 @@ function Todo({ todo, index, remove }) {
     </div>
   );
 }
+
+export default Todo;
